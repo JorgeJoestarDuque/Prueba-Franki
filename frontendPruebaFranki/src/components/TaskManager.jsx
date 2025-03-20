@@ -1,6 +1,5 @@
-import { useState } from "react";
+const TaskManager = ({onPostTask}) => {
 
-const TaskManager = () => {
     const [formData, setFormData] = useState({
         title:"",
         description:""
@@ -12,11 +11,15 @@ const TaskManager = () => {
             [event.target.name]: event.target.value
         })
     }
+    const handleOnSubmit = (event) => {
+        event.preventDefault();
+        onPostTask(formData)
+    }
     return(
         <>
             <div>
                 <h2>Gestor de tareas</h2>
-                <form>
+                <form onSubmit={handleOnSubmit}>
                     <label>
                         Titulo
                         <input type="text" name="title" value={formData.title} onChange={handleOnChange}/>
