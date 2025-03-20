@@ -1,26 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-const initialTask = [
-  {
-      title: 'Hola 1',
-      description: 'Pendejo 1'
-  },
-  {
-title: 'Hola 1',
-      description: 'Pendejo 1'
-  },
-  {
-title: 'Hola 1',
-      description: 'Pendejo 1'
-  }
-]
+import axios from "axios";
 
 const tasksSlice = createSlice({
   name: "tasks",
-  initialState: initialTask,
+  initialState: [],
   reducers: {
     getTasks: (state, action) => {
-      return action.payload;
+      return state = action.payload
     },
   },
 });
