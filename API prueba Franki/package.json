@@ -1,0 +1,23 @@
+{
+  "name": "api-prueba",
+  "version": "1.0.0",
+  "description": "The api of prueba franki",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Jorge-Duque",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
