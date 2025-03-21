@@ -1,0 +1,82 @@
+input {
+  font: inherit;
+}
+
+textarea {
+  font: inherit;
+}
+
+.form {
+  margin: 40px auto;
+  padding: 3rem 1.5rem;
+  background-color: #fff;
+  width: min(350px, 90%);
+  border-radius: 10px;
+}
+
+.form_title {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.form_inputs {
+  margin: 2rem 0 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  color: #6b6b6b;
+}
+
+.form_label {
+  width: 100%;
+
+  display: grid;
+  grid-template-areas: "input";
+}
+
+.form_input {
+  grid-area: input;
+
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #d7d0d0;
+  padding: 0.7rem 1.5rem;
+}
+
+.form_text {
+  grid-area: input;
+  z-index: 100;
+  width: max-content;
+  height: 100%;
+  height: 20px;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+
+  transform-origin: left center;
+  transition: transform 0.3s;
+}
+
+.form_input:focus + .form_text,
+.form_input:not(:placeholder-shown) + .form_text {
+  background-color: white;
+  transform: translateY(-50%) scale(0.7);
+}
+
+.form_submit {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #536878;
+  padding: 1rem 2rem;
+  color: white;
+  border: none;
+  margin-top: 0.5rem;
+}
+.text {
+  margin: 1.5rem;
+  font-weight: bold;
+  font: inherit;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
