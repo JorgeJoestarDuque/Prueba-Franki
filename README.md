@@ -51,4 +51,9 @@ Aquí se presentan algunas historias de usuario con sus criterios de aceptación
 - Se puede crear de manera opcional una descripción que no sobrepase los 200 caracteres .
 - Si la creación de tarea es exitosa se mostrara dentro de la lista de tareas.
 ---
-## 
+## Estrategia de manejo de ramas
+Se empezo a trabajar con ramas desde que se manejo front por descuido, se entiende que para un desarrollo ordenado y en equipo se usan las siguientes caracteristicas:
+- Rama principal (```main```): Contiene la versión estable del proyecto.
+- Ramas de características (```feature```/nombre-funcionalidad): Se crean a partir de ```main``` para trabajar en nuevas funciones.
+- Ramas de corrección de errores (```fix```/nombre-arreglo): Se crean cuando se necesita corregir errores detectados en ```develop``` o ```main```.
+- Ramas de integración (```release/version```): Se usan para preparar una nueva versión antes de fusionarla con ```main```.
