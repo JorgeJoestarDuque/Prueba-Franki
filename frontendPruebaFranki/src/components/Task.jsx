@@ -37,6 +37,7 @@ const Task = ({ title, description, onDeleteTask, editTask, id }) => {
     <>
       {edit ? (
         <form onSubmit={handleOnSubmit} className="form">
+          <h3 className="form_title">Editar tarea</h3>
           <div className='form_div'>
             <p className="text">Titulo</p>
               <label className="form_label">
@@ -51,6 +52,7 @@ const Task = ({ title, description, onDeleteTask, editTask, id }) => {
             <p className="text">Descripcion</p>
             <label className="form_label">
               <textarea
+                className="form_input"
                 type="text"
                 name="description"
                 value={formData.description}

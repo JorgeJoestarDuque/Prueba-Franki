@@ -1,0 +1,6 @@
+div{
+    margin: 10px auto;
+    background-color: #cdcdcd;
+    width: min(500px, 90%);
+    border-radius: 10px;
+}

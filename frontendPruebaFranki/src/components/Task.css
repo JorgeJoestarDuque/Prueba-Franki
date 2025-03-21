@@ -12,6 +12,11 @@ button {
     margin: 0.5rem;
 }
 
+.form_title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
 .form_inputs {
 margin: 2rem 0 1.5rem;
 gap: 1.5rem;
@@ -19,6 +24,7 @@ color: #6b6b6b;
 }
 
 .form {
+    box-shadow: .5rem;
     margin: 40px auto;
     padding: 3rem 1.5rem;
     background-color: #fff;
@@ -35,7 +41,7 @@ color: #6b6b6b;
 }
 
 .text {
-    margin: 1.5rem;
+    margin: .5rem;
     font-weight: bold;
     font: inherit;
     font-size: 1rem;
