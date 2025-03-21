@@ -10,3 +10,7 @@ body {
   height: 100vh;
   background-color: #82a1b1;
 }
+
+::first-letter{
+  text-transform: capitalize;
+}

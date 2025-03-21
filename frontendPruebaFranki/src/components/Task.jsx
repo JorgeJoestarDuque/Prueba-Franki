@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Task.css"
 
 //Componente para crear tareas
 const Task = ({ title, description, onDeleteTask, editTask, id }) => {
@@ -35,34 +36,37 @@ const Task = ({ title, description, onDeleteTask, editTask, id }) => {
   return (
     <>
       {edit ? (
-        <form onSubmit={handleOnSubmit}>
-          <label>
-            Titulo
-            <input
-              type="text"
-              name="title"
-              value={formData.title}
-              onChange={handleOnChange}
-            ></input>
-          </label>
-          <label>
-            Descripcion
-            <textarea
-              type="text"
-              name="description"
-              value={formData.description}
-              onChange={handleOnChange}
-            ></textarea>
-          </label>
-          <button type="submit">Aceptar</button>
-          <button onClick={handleEdit}>Cancelar</button>
+        <form onSubmit={handleOnSubmit} className="form">
+          <div className='form_div'>
+            <p className="text">Titulo</p>
+              <label className="form_label">
+              <input
+                className="form_input"
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleOnChange}
+              ></input>
+            </label>
+            <p className="text">Descripcion</p>
+            <label className="form_label">
+              <textarea
+                type="text"
+                name="description"
+                value={formData.description}
+                onChange={handleOnChange}
+              ></textarea>
+            </label>
+            <button type="submit" className="button_accept">Aceptar</button>
+            <button onClick={handleEdit} className="button_delete">Cancelar</button>
+          </div>
         </form>
       ) : (
-        <div>
+        <div className="div_div">
           <h3>{title}</h3>
           <p>{description}</p>
-          <button onClick={() => setEdit(true)}>Editar</button>
-          <button onClick={() => onDeleteTask(id)}>Eliminar</button>
+          <button onClick={() => setEdit(true)} className="button_edit">Editar</button>
+          <button onClick={() => onDeleteTask(id)} className="button_delete">Eliminar</button>
         </div>
       )}
     </>
