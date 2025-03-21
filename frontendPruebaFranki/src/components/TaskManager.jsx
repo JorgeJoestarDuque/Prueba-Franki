@@ -1,16 +1,22 @@
+import { useState } from 'react'
+
 const TaskManager = ({onPostTask}) => {
 
+    //Tarea sin crear
     const [formData, setFormData] = useState({
         title:"",
         description:""
     })
 
+    //Sobreescribe la data correspondiente
     const handleOnChange = (event) => {
         setFormData({
             ...formData,
             [event.target.name]: event.target.value
         })
     }
+
+    //Publica la data
     const handleOnSubmit = (event) => {
         event.preventDefault();
         onPostTask(formData)

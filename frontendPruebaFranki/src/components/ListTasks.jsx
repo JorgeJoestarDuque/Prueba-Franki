@@ -1,12 +1,13 @@
 import Task from "./Task.jsx";
 
-const ListTasks = ({tasks}) => {
+//Componente para mostrar tareas
+const ListTasks = ({tasks, deleteTask, putTask}) => {
     return(
         <>
             <h2>Lista de Tareas</h2>
             {tasks.map((task) => {
                 return (
-                        <Task key={task.id} title={task.title} description={task.description}/>
+                        <Task id={task.id} editTask={putTask} onDeleteTask={deleteTask} key={task.id} title={task.title} description={task.description}/>
                 )
             })}
         </>
